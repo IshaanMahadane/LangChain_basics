@@ -1,13 +1,13 @@
+import streamlit as st
+import os
 from langchain_community.llms import OpenAI
 from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
-from langchain.chains import SequentialChain
-from secret_key import openai_key
+from langchain.chains import LLMChain, SequentialChain
 
-import os
-os.environ["OPENAI_API_KEY"]= openai_key
-llm = OpenAI(temperature = 0.7)
 
+os.environ["OPENAI_API_KEY"] = st.secrets["openai_key"]
+
+llm = OpenAI(temperature=0.7)
 
 def generate_restaurant_name_and_items(cuisine):
     prompt_template_name = PromptTemplate(
