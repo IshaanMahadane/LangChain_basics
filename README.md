@@ -110,8 +110,3 @@ Step 2: GPT generates menu items based on the restaurant name.
 
 Results are returned to the frontend and displayed.
 
-⚠️ Notes
-
-Make sure the OpenAI API key is valid and active.
-
-The current implementation uses deprecated LangChain classes (LLMChain and OpenAI). Consider updating to langchain_openai for future compatibility.
